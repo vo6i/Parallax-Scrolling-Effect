@@ -7,15 +7,17 @@
     <title>Parallax Scrolling Effect</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision/vision_bundle.js"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous" async></script>
     <script type="module">
       import mediapipetasksVision from 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.16/+esm'
+    </script>
+    <script async>
 
       const vision = await FilesetResolver.forVisionTasks(
        "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision/wasm"
       );
       const faceStylizer = await FaceStylizer.createFromModelPath(vision,
-    "https://storage.googleapis.com/mediapipe-models/face_stylizer/blaze_face_stylizer/float32/1/blaze_face_stylizer.task"
+      "https://storage.googleapis.com/mediapipe-models/face_stylizer/blaze_face_stylizer/float32/1/blaze_face_stylizer.task"
       );
      const image = document.getElementById("image") as HTMLImageElement;
      const stylizedImage = faceStylizer.stylize(image);
