@@ -15,7 +15,7 @@
       const faceDetector = await FaceDetector.createFromModelPath(vision,
        "https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/1/blaze_face_short_range.tflite"
       );
-      const image = document.getElementById("img") as HTMLImageElement;
+      const image = document.getElementById("image") as HTMLImageElement;
       const detections = faceDetector.detect(image);
     </script>
 </head>
@@ -55,6 +55,11 @@
 
             <div class="imgContainer opacity">
                 <img src="img/lstdbydclxviclan.gif" alt="">
+                
+
+
+               <img id="image" src="business-man-leon-short.gif" width="207" height="408">
+
             </div>
         </div>
     </section>
